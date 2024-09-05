@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ropa Store - Ropa de moda y estilo a tu alcance">
+    <title>Ropa Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f4f0; /* Color de fondo suave */
+        }
+        header {
+            background-color: #cc4510; /* Color principal del encabezado */
+            color: #fff; /* Texto blanco para contraste */
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #fff; /* Color del texto del título */
+        }
+        .banner {
+            background-color: #f4a261; /* Color del banner */
+            color: #333; /* Color del texto del banner */
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .producto {
+            background-color: #fff; /* Fondo blanco para los productos */
+            border: 1px solid #ddd; /* Borde suave */
+            border-radius: 8px;
+            width: 300px;
+            margin: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .producto img {
+            width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .producto h3 {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #cc4510; /* Color de título del producto */
+        }
+        .producto p {
+            padding: 0 15px;
+            font-size: 16px;
+            color: #555; /* Texto en gris oscuro para legibilidad */
+        }
+        .btn {
+            display: inline-block;
+            background-color: #cc4510; /* Color del botón */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border: 2px solid #cc4510; /* Borde del botón */
+        }
+        .btn:hover {
+            background-color: #b93f06; /* Color del botón al pasar el ratón */
+            border-color: #b93f06; /* Cambia el borde al pasar el ratón */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333; /* Color oscuro para el pie de página */
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        // Función para redirigir a WhatsApp con el producto seleccionado y emojis
+        function enviarAWhatsApp(producto) {
+            const numeroTelefono = "573202758495";  // Reemplaza con tu número de teléfono
+            const mensaje = `👕✨ Hola, estoy interesado en *${producto}* 🛍️. ¡Me gustaría saber más detalles! 🔥`;
+            const url = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Ropa Store</h1>
+    </header>
+
+    <section class="banner">
+        ¡Aprovecha el 10% de descuento por el Mes de las Madres! 🌷✨ Solo por este mes.
+    </section>
+
+    <section class="productos">
+        <!-- Producto 1 -->
+        <div class="producto">
+            <img src="https://i.imgur.com/OgNkDpP.jpeg" alt="Producto 1">
+            <h3>Camisa Casual</h3>
+            <p>Camisa cómoda y moderna para cualquier ocasión.</p>
+            <button class="btn" onclick="enviarAWhatsApp('Camisa Casual')">Comprar ahora</button>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="producto">
+            <img src="https://i.imgur.com/tk8vJn3.jpeg" alt="Producto 2">
+            <h3>Pantalones de Jean</h3>
+            <p>Pantalones de jean de alta calidad y estilo.</p>
+            <button class="btn" onclick="enviarAWhatsApp('Pantalones de Jean')">Comprar ahora</button>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x400" alt="Producto 3">
+            <h3>Chaqueta de Cuero</h3>
+            <p>Chaqueta elegante y duradera para un look moderno.</p>
+            <button class="btn" onclick="enviarAWhatsApp('Chaqueta de Cuero')">Comprar ahora</button>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x400" alt="Producto 4">
+            <h3>Vestido de Verano</h3>
+            <p>Vestido ligero y colorido, perfecto para el verano.</p>
+            <button class="btn" onclick="enviarAWhatsApp('Vestido de Verano')">Comprar ahora</button>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x400" alt="Producto 5">
+            <h3>Sudadera Deportiva</h3>
+            <p>Sudadera cómoda y transpirable para entrenamientos.</p>
+            <button class="btn" onclick="enviarAWhatsApp('Sudadera Deportiva')">Comprar ahora</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ropa Store. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
